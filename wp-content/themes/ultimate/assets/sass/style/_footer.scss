@@ -1,0 +1,29 @@
+#footer {
+  
+}
+
+.copy {
+	background-color: darken(#262626, 5%);
+	padding: 10px 0;
+	@include clear;
+
+	.ultimate {
+		h5 {
+			color: #8c8c8c;
+			font-size: 12px;
+			display: inline-block;
+		}
+
+		a {
+			display: inline-block;
+			color: #8c8c8c;
+			float: right;
+			font-size: 12px;
+			@include animacao;
+
+			&:hover {
+				color: #ffffff;
+			}
+		}
+	}
+}

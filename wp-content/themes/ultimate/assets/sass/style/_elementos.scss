@@ -1,0 +1,43 @@
+strong, b {
+	font-weight: $bold;
+}
+
+.col-text {
+	margin-bottom: 50px;
+
+	.ico {
+		margin: 0 auto;
+		display: block;
+		width: 80px;
+	}
+
+	h4 {
+		font-size: 30px;
+		text-align: center;
+		color: #000000;
+		margin-bottom: 20px;
+	}
+
+	p {
+		font-size: 16px;
+		line-height: 25px;
+		text-align: justify;
+		margin-bottom: 16px;
+
+		&:last-child {
+			margin-bottom: 0px;
+		}
+	}
+
+	&:last-child {
+		margin-bottom: 0px;
+	}
+}
+
+h1 {
+	width: 300px;
+
+	img {
+		width: 100%;
+	}
+}

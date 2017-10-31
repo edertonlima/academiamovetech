@@ -1,0 +1,164 @@
+.slide {
+	height: $hSlide;
+	border-top: 2px solid $azul;
+	
+	.item {
+		width: 100%;
+		height: $hSlide;
+		background-position: center;
+		background-size: cover;
+		line-height: $hSlide;
+
+		&:after {
+			content: '';
+			background-color: rgba(#000, .3);
+			position: absolute;
+			top: 0;
+			height: $hSlide;;
+			width: 100%;
+			z-index: 999;
+		}
+
+		.box-height {
+			display: table;
+			width: 100%;
+			height: $hSlide;
+			line-height: $hSlide;
+			position: relative;
+			z-index: 9999;
+		}
+
+		.box-texto {
+			display: table-cell;
+			vertical-align: middle;
+
+			img {
+				display: block;
+				max-width: 130px;
+				margin: 0 auto;
+			}
+
+			p {
+				color: #ffffff;
+				text-align: center;
+				display: block;
+				padding: 0 50px;
+				width: 90%;
+				max-width: 1000px;
+				margin: 0 auto;
+				text-shadow: 1px 1px 1px #000000;
+
+				&.texto {
+					font-size: 3.62rem;
+					line-height: 3.62rem;
+					font-weight: 700;
+				}
+
+				&.sub-texto {
+					margin-top: 15px;
+					font-size: 1.5625rem;
+					line-height: 1.7rem;
+					font-weight: $light;
+				}
+
+				@media all and (max-width: 750px){
+					&.texto {
+						font-size: 1.5625rem;
+						line-height: 1.5625rem;
+					}
+
+					&.sub-texto {
+						font-size: 1.125rem;
+						line-height: 1.125rem;
+					}
+				}
+			}
+		}
+	}
+
+	.carousel-control {
+		position: absolute;
+		height: 0;
+		top: 50%;
+		width: 100%;
+		z-index: 100;
+		opacity: .3;
+		text-shadow: none;
+		display: none;
+		@include animacao();
+
+		a {
+			width: 100px;
+			height: 180px;
+			text-align: center;
+			line-height: 167px;
+			font-size: 5rem;
+			z-index: 990;
+			margin-top: -90px;
+			background-color: rgba(#000, .5);
+			@include animacao();
+
+			i {
+				color: #ffffff;
+			}
+
+			&:hover {
+				background-color: rgba(#000, 1);
+			}
+
+			&.left {
+				left: 10%;
+				float: left;
+			}
+
+			&.right {
+				float: right;
+				right: 10%;
+			}
+
+			@media all and (max-width: 1300px){
+				&.left {
+					left: 5%;
+				}
+
+				&.right {
+					right: 5%;
+				}
+			}
+
+		}
+	}
+
+	&:hover {
+		.carousel-control  {
+			opacity: 1;
+		}
+	}
+
+	.carousel-indicators {
+		position: absolute;
+		bottom: 0px;
+		right: 0;
+		margin: 0;
+		left: auto;
+		padding: 10px 0 8px;
+		background: #2a2a2a;
+		width: 100%;
+		display: none;
+
+		li {
+			width: 15px;
+			height: 15px;
+			display: inline-block;
+			margin: 0 5px;
+			border: none;
+			border-radius: 50%;
+			background-color: #ffffff;
+			@include animacao();
+
+			&.active {
+				background-color: #e48204;
+			}
+		}
+	}
+}
