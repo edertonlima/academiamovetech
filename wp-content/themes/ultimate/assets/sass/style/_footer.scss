@@ -1,9 +1,83 @@
-#footer {
-  
+.footer {
+	padding: 50px 0 0 0;
+	//@include box-sizing;
+	//@include clear;
+
+	.row {
+		display: table;
+		.col-footer {
+			display: table-cell;
+			float: none;
+			vertical-align: middle;
+		}
+	}
+
+    a {
+    	text-decoration: none;
+
+    	&:hover {
+    		opacity: .5;
+    	}
+    }
+
+	.logo {
+
+		h1 {
+		    width: 220px;
+		}
+
+		p {
+		    font-size: 12px;
+		    text-align: left;
+		    opacity: .7;
+		}
+	}
+
+
+	.footer-contato {
+		.fone-footer {
+			width: 100%;
+			font-size: 1.2rem;
+			color: #ffffff;
+			text-decoration: none;
+
+			strong {
+				font-size: 2rem;
+				color: #ffffff;
+			}
+
+			p {
+			    font-size: 12px;
+			    text-align: left;
+			    opacity: .7;
+			}
+		}
+
+		.redes {
+			text-align: center;
+			a {
+				display: inline-block;
+				padding: 5px;
+				margin: 0 3px;
+			}
+
+			i {
+				font-size: 30px;
+				color: #ffffff;
+				@include animacao;
+
+			    &:hover {
+			    	opacity: .6;
+			    }
+			}
+		}
+	}
 }
 
+
 .copy {
-	background-color: darken(#262626, 5%);
+	background-color: darken($azul-escuro, 5%);
+	margin: 50px 0 0 0;
 	padding: 10px 0;
 	@include clear;
 

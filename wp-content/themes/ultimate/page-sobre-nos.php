@@ -1,8 +1,15 @@
-<?php 
-	$imagem = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );
-?>
-
 <?php get_header(); ?>
+
+	<header class="header-title">
+		<div class="container">
+			
+			<h2>
+				Sobre nós
+				<ul class="breadcrumb"><li><a href="<?php echo get_home_url(); ?>" title="Home">Home</a></li><li><span><?php the_title(); ?></span></li></ul>
+			</h2>
+
+		</div>
+	</header>
 
 	<?php
 	// Start the loop.

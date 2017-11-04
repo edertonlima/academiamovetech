@@ -1,8 +1,3 @@
-<?php
-	global $servico;
-	global $orcamento;
-?>
-
 <section class="box-content box-page box-page-sobre">
 	<div class="container">
 		
@@ -38,11 +33,11 @@
 								<?php endwhile; ?>						
 							</div>
 						<?php endif; ?>
-						<span class="fone-topo">
-							<strong><i class="fa fa-phone" aria-hidden="true"></i><?php the_field('telefone_1', 'option'); ?></strong>
-							<strong><i class="fa fa-whatsapp" aria-hidden="true"></i><?php the_field('whatsapp', 'option'); ?></strong>
+
+						<span class="fone-footer">
+							<strong><?php the_field('telefone_1', 'option'); ?><br></strong>
 							<?php the_field('email', 'option'); ?>
-						</span>
+						</span>	
 					</div>
 
 					<p><?php the_field('endereco', 'option'); ?></p>
@@ -64,18 +59,13 @@
 								<input type="text" id="telefone" name="telefone" placeholder="Telefone:">
 							</fieldset>
 
-							<fieldset <?php if($orcamento == ''){ ?> style="display: none;" <?php } ?>>
-								<input type="text" disabled="disabled" id="assunto" name="assunto:" placeholder="Serviço:" <?php if($orcamento != ''){ ?> value="Serviço: <?php echo $servico; ?>" <?php } ?>>
-							</fieldset>
-
-
 							<fieldset>
 								<textarea name="mensagem" id="mensagem" placeholder="Mensagem: "></textarea>
 							</fieldset>
 
 							<fieldset>
 								<p class="msg-form"></p>
-								<button type="button" class="enviar">Enviar</button>
+								<button type="button" class="enviar">Enviar <i class="fa fa-long-arrow-right" aria-hidden="true"></i></button>
 							</fieldset>
 						</form>
 					</div>
@@ -105,7 +95,7 @@
 			var nome_site = '<?php get_field('titulo', 'option'); ?>';
 
 			if(email!=''){
-				jQuery.getJSON("<?php echo get_template_directory_uri(); ?>/mail.php", { nome:nome, email:email, telefone:telefone, assunto:assunto, mensagem:mensagem, para:para, nome_site:nome_site }, function(result){		
+				jQuery.getJSON("<?php echo get_template_directory_uri(); ?>/mail.php", { nome:nome, email:email, telefone:telefone, mensagem:mensagem, para:para, nome_site:nome_site }, function(result){		
 					if(result=='ok'){
 						resultado = 'Enviado com sucesso! Obrigado.';
 						classe = 'ok';

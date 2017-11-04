@@ -63,27 +63,27 @@ function gera_url_encurtada($url){
 function change_post_label() {
     global $menu;
     global $submenu;
-    $menu[5][0] = 'Notícias';
-    $submenu['edit.php'][5][0] = 'Todas as notícias';
-    $submenu['edit.php'][10][0] = 'Adicionar notícia';
+    $menu[5][0] = 'Dicas e Curiosidades';
+    $submenu['edit.php'][5][0] = 'Todos';
+    $submenu['edit.php'][10][0] = 'Adicionar';
     echo '';
 }
 function change_post_object() {
     global $wp_post_types;
     $labels = &$wp_post_types['post']->labels;
-    $labels->name = 'Notícias';
-    $labels->singular_name = 'Notícia';
-    $labels->add_new = 'Adicionar notícia';
-    $labels->add_new_item = 'Adicionar notícia';
-    $labels->edit_item = 'Editar notícia';
-    $labels->new_item = 'Notícia';
-    $labels->view_item = 'Ver notícia';
-    $labels->search_items = 'Buscar notícia';
-    $labels->not_found = 'Nenhuma notícia encontrado';
-    $labels->not_found_in_trash = 'Nenhuma notícia encontrada na lixeira';
-    $labels->all_items = 'Todas as notícias';
-    $labels->menu_name = 'Notícias';
-    $labels->name_admin_bar = 'Notícias';
+    $labels->name = 'Dicas e Curiosidades';
+    $labels->singular_name = 'Dicas e Curiosidades';
+    $labels->add_new = 'Adicionar';
+    $labels->add_new_item = 'Adicionar';
+    $labels->edit_item = 'Editar';
+    $labels->new_item = 'Dicas e Curiosidades';
+    $labels->view_item = 'Visualizar';
+    $labels->search_items = 'Pesquisar';
+    $labels->not_found = 'Nenhum item encontrado.';
+    $labels->not_found_in_trash = 'A lixeira está vazia.';
+    $labels->all_items = 'Todos';
+    $labels->menu_name = 'Dicas e Curiosidades';
+    $labels->name_admin_bar = 'Dicas e Curiosidades';
 }
  
 add_action( 'admin_menu', 'change_post_label' );
@@ -231,87 +231,12 @@ add_filter( 'get_the_archive_title', function ($title) {
 
 
 
-/*
-add_action( 'init', 'create_post_type_1' );
-function create_post_type_1() {
-
-	$labels = array(
-	    'name' => _x('Comercial', 'post type general name'),
-	    'singular_name' => _x('Comercial', 'post type singular name'),
-	    'add_new' => _x('Adicionar novo', ''),
-	    'add_new_item' => __('Addicionar novo'),
-	    'edit_item' => __('Editar'),
-	    'new_item' => __('Novo'),
-	    'all_items' => __('Todos'),
-	    'view_item' => __('Visualizar'),
-	    'search_items' => __('Procurar'),
-	    'not_found' =>  __('Nenhum encontrado.'),
-	    'not_found_in_trash' => __('Nenhum encontrado na lixeira.'),
-	    'parent_item_colon' => '',
-	    'menu_name' => 'Comercial'
-	);
-	$args = array(
-	    'labels' => $labels,
-	    'public' => true,
-	    'publicly_queryable' => true,
-	    'show_ui' => true,
-	    'show_in_menu' => true,
-	    'rewrite' => true,
-	    'capability_type' => 'post',
-	    'has_archive' => true,
-	    'hierarchical' => false,
-	    'menu_position' => null,
-	    'menu_icon' => 'dashicons-store',
-	    'supports' => array('title','excerpt','editor','thumbnail')
-	  );
-
-    register_post_type( 'comercial', $args );
-}
-
-add_action( 'init', 'create_taxonomy_categoria_1' );
-function create_taxonomy_categoria_1() {
-
-	$labels = array(
-	    'name' => _x( 'Categoria', 'taxonomy general name' ),
-	    'singular_name' => _x( 'Categoria', 'taxonomy singular name' ),
-	    'search_items' =>  __( 'Procurar categoria' ),
-	    'all_items' => __( 'Todas as categorias' ),
-	    'parent_item' => __( 'Categoria pai' ),
-	    'parent_item_colon' => __( 'Categoria pai:' ),
-	    'edit_item' => __( 'Editar categoria' ),
-	    'update_item' => __( 'Atualizar categoria' ),
-	    'add_new_item' => __( 'Adicionar nova categoria' ),
-	    'new_item_name' => __( 'Nova categoria' ),
-	    'menu_name' => __( 'Categorias' ),
-	);
-
-    register_taxonomy( 'categoria_comercial', array( 'comercial' ), array(
-        'hierarchical' => true,
-        'labels' => $labels,
-        'show_ui' => true,
-        'show_admin_column' => true,
-        'show_in_tag_cloud' => true,
-        'query_var' => true,
-		'has_archive' => 'comercial',
-		'rewrite' => array(
-		    'slug' => 'comercial',
-		    'with_front' => false,
-			),
-        )
-    );
-}
-
-*/
-
-
-
 	/* POST TYPE */
-	/*
-	function residencial_post_type(){
-		register_post_type('residencial', array( 
+	function modalidades_post_type(){
+		register_post_type('modalidades', array( 
 			'labels'            =>  array(
-				'name'          =>      __('Residencial'),
-				'singular_name' =>      __('Residencial'),
+				'name'          =>      __('Modalidades'),
+				'singular_name' =>      __('Modalidades'),
 				'all_items'     =>      __('Todos'),
 				'add_new'       =>      __('Adicionar'),
 				'add_new_item'  =>      __('Adicionar'),
@@ -329,29 +254,29 @@ function create_taxonomy_categoria_1() {
 			'capability_type'   =>  'post',
 			'hierarchical'      =>  true,
 			'rewrite'=> [
-				'slug' => 'servicos/residencial',
+				'slug' => 'modalidades',
 				"with_front" => false
 			],
-			"cptp_permalink_structure" => "/%residencial_taxonomy%/%postname%/",
+			"cptp_permalink_structure" => "/%modalidades_taxonomy%/%postname%/",
 			'menu_position'     =>  21,
-			'supports'          =>  array('title','editor', 'thumbnail'),
+			'supports'          =>  array('title','editor','excerpt','thumbnail'),
 			'has_archive'       =>  true,
-			'menu_icon' => 'dashicons-admin-home'
+			'menu_icon' => 'dashicons-universal-access'
 		));
 		flush_rewrite_rules();
 	}
-	add_action('init', 'residencial_post_type');
-	function residencial_taxonomy() {  
+	add_action('init', 'modalidades_post_type');
+	function modalidades_taxonomy() {  
 		register_taxonomy(  
-			'residencial_taxonomy',  
-			'residencial',        
+			'modalidades_taxonomy',  
+			'modalidades',        
 			array(
 				'label' => __( 'Categorias' ),
 				'rewrite'=> [
-					'slug' => 'servicos/residencial',
+					'slug' => 'modalidades',
 					"with_front" => false
 				],
-				"cptp_permalink_structure" => "/%residencial_taxonomy%/",
+				"cptp_permalink_structure" => "/%modalidades_taxonomy%/",
 				'hierarchical'               => true,
 				'public'                     => true,
 				'show_ui'                    => true,
@@ -361,7 +286,9 @@ function create_taxonomy_categoria_1() {
 			) 
 		);  
 	}  
-	add_action( 'init', 'residencial_taxonomy');
+	add_action( 'init', 'modalidades_taxonomy');
 	/* POST TYPE */
+
+
 
 ?>

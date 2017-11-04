@@ -1,0 +1,91 @@
+.atendimento {
+	p {
+		display: block;
+		font-size: 14px;
+		color: #444;
+		font-weight: 300;
+		line-height: 18px;
+		margin-top: 10px;
+		margin-left: 5px;
+	}
+
+	.fone-top {
+		display: block;
+		margin-top: 15px;
+		margin-bottom: 16px;
+		margin-left: 0;
+
+		.redes {
+			display: inline-block;
+			margin-bottom: 5px;
+
+			a {
+				background: $azul;
+				border-radius: 50%;
+				width: 35px;
+				height: 35px;
+				display: inline-block;
+				text-align: center;
+				margin: 0 3px;
+				line-height: 37px;
+				@include animacao;
+
+				i {
+					font-size: 18px;
+					color: #ffffff;
+					@include animacao;
+				}
+
+				&:hover {
+					background: $azul-escuro;
+				}
+			}
+		}
+
+		.fone-topo {
+			display: block;
+			font-size: 14px;
+			position: relative;
+			top: 6px;
+			margin-left: 5px;
+			color: #444;
+			font-weight: 300;
+
+			strong {
+				color: #444;
+				font-size: 18px;
+				display: block;
+
+				i {
+					font-size: 18px;
+					margin-right: 5px;
+
+					&.fa-whatsapp {
+						margin-bottom: 10px;
+					}
+				}
+			}
+		}
+
+		.fone-footer {
+			width: 100%;
+			font-size: 1.2rem;
+			color: $azul-escuro;
+			text-decoration: none;
+			display: block;
+			margin-top: 10px;
+
+			strong {
+				font-size: 2rem;
+				color: $azul-escuro;;
+			}
+
+			p {
+			    font-size: 12px;
+			    text-align: left;
+			    opacity: .7;
+			}
+		}
+
+	}
+}

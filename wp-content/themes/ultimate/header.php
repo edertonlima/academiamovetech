@@ -102,7 +102,7 @@
 
 	jQuery(document).ready(function(){
 
-		jQuery('.menu-mobile').click(function(){
+		/*jQuery('.menu-mobile').click(function(){
 			if(jQuery(this).hasClass('active')){
 				jQuery('.nav').css('top','-110vh');
 				jQuery(this).removeClass('active');
@@ -112,7 +112,7 @@
 				jQuery(this).addClass('active');
 				jQuery('.header').addClass('active');
 			}
-		});
+		});*/
 
 		if(jQuery('body').height() <= jQuery(window).height()){
 			jQuery('.footer').css({position: 'absolute', bottom: '0px'});
@@ -127,23 +127,23 @@
 	});	
 
 	jQuery(window).resize(function(){
-		jQuery('.menu-mobile').removeClass('active');
+		/*jQuery('.menu-mobile').removeClass('active');
 		jQuery('.header').removeClass('active');
 		jQuery('.nav').css('top','-110vh');
 		if(jQuery('body').height() <= jQuery(window).height()){
 			jQuery('.footer').css({position: 'absolute', bottom: '0px'});
 		}else{
 			jQuery('.footer').css({position: 'relative'});
-		}
+		}*/
 	});
 
 	jQuery(window).scroll(function(){
-		scroll_body = jQuery(window).scrollTop();
+		/*scroll_body = jQuery(window).scrollTop();
 		if(scroll_body > 400){
 			jQuery('.header').addClass('scroll_menu');
 		}else{
 			jQuery('.header').removeClass('scroll_menu');
-		}
+		}*/
 	});
 </script>
 
@@ -159,7 +159,7 @@
 					<?php the_field('email', 'option'); ?><br>
 				</span>
 
-				<h2>Horário de funcionamento:</h2>
+				<div class="item-horario">Horário de funcionamento:</div>
 				<i class="fa fa-clock-o" aria-hidden="true"></i>
 				<ul class="horario">
 					<li>
@@ -173,24 +173,7 @@
 						sábado, 10h às 12h
 					</li>
 				</ul>
-
-				<div class="phone">
-					<i class="fa fa-phone" aria-hidden="true"></i>
-					<ul class="horario">
-						<li>
-							(48) 3083.4331
-						</li>
-					</ul>
-				</div>
 			</div>
-		</div>
-
-		<div class="fone-top" style="display: none;">
-
-			<span class="fone-topo">
-				<strong><?php the_field('telefone_1', 'option'); ?><br></strong>
-				<?php the_field('email', 'option'); ?><br>
-			</span>
 		</div>
 
 		<div class="container">
@@ -210,31 +193,19 @@
 					</li>
 
 					<li class="menu-modalidades">
-						<a href="<?php echo get_permalink(get_page_by_path('modalidades')); ?>" title="Modalidades">Modalidades</a>
-					</li>
-
-					<li class="menu-equipe" style="display: none;">
-						<a href="<?php echo get_permalink(get_page_by_path('equipe')); ?>" title="Equipe">Equipe</a>
-					</li>
-
-					<li class="menu-convenios" style="display: none;">
-						<a href="<?php echo get_permalink(get_page_by_path('convenios')); ?>" title="Convênios">Convênios</a>
+						<a href="<?php echo get_home_url(); ?>/modalidades" title="Modalidades">Modalidades</a>
 					</li>
 
 					<li class="menu-horarios">
 						<a href="<?php echo get_permalink(get_page_by_path('horarios')); ?>" title="Horários">Horários</a>
 					</li>
 
-					<li class="menu-club-de-vantagens" style="display: none;">
-						<a href="<?php echo get_permalink(get_page_by_path('club-de-vantagens')); ?>" title="Club de vantagens">Club de vantagens</a>
-					</li>
-
 					<li class="menu-dicas-e-curiosidades">
-						<a href="<?php echo get_permalink(get_page_by_path('dicas-e-curiosidades')); ?>" title="Dicas e Curiosidades">Dicas e Curiosidades</a>
+						<a href="<?php echo get_home_url(); ?>/dicas-e-curiosidades" title="Dicas e Curiosidades">Dicas e Curiosidades</a>
 					</li>
 
-					<li class="menu-fale-conosco">
-						<a href="<?php echo get_permalink(get_page_by_path('fale-conosco')); ?>" title="Fale Conosco">Contato</a>
+					<li class="menu-contato">
+						<a href="<?php echo get_permalink(get_page_by_path('contato')); ?>" title="Contato">Contato</a>
 					</li>
 
 					<?php if( have_rows('redes_sociais','option') ): ?>
@@ -251,25 +222,6 @@
 			</nav>
 		</div>
 	</header>
-
-	<?php if(!is_front_page()){ ?>
-
-		<header class="header-title">
-			<div class="container">
-
-				<?php 
-					global $orcamento;
-					if((is_page(202)) and ($orcamento != '')){ ?>
-						<h1>Orçamento de Serviço</h1>
-					<?php }else{ ?>
-						<h1><?php the_title(); ?></h1>
-					<?php }
-				?>
-			</div>
-		</header>
-
-	<?php } ?>
-
 <?php /*
 
 	<header class="header">

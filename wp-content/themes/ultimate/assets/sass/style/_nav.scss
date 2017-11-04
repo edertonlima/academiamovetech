@@ -27,7 +27,7 @@
 			@include animacao();
 
 			&:hover {
-				color: $vermelho;
+				color: $azul;
 			}
 		}
 	}
@@ -83,16 +83,15 @@
 		&:hover {
 
 			span, span:before, span:after {
-				background-color: $vermelho;
+				background-color: $azul;
 			}
 		}
 	}
 }
 
 .nav {
-	position: absolute;
-	top: 30px;
 	width: 100%;
+	@include box-sizing;
 
 	h1 {
 		float: left;
@@ -101,23 +100,30 @@
 
 	ul {
 		float: right;
-		margin-top: 45px;
+		margin-top: 30px;
 
 		li {
 			display: inline-block;
-			padding: 0 10px;
+			padding: 7px 10px 5px;
+			@include animacao;
 
 			a {
-				font-size: 1rem;
+				font-size: .875rem;
+				font-weight: $bold;
 				color: #ffffff;
-				text-shadow: 1px 1px 1px #000000;
 				text-decoration: none;
+				text-transform: uppercase;
+				@include animacao;
 			}
 
 			&.redes {
-				top: 2px;
+				top: 1px;
 				position: relative;
-				padding: 0 4px;
+				//border-radius: 50%;
+				height: 35px;
+				line-height: 24px;
+				width: 35px;
+				text-align: center;
 
 				a {
 					i {
@@ -126,30 +132,66 @@
 					}
 				}
 			}
+
+			&:hover {
+				background-color: $azul;
+
+				a {
+					text-shadow: none;
+				}
+			}
 		}
 	}
 }
 
 .home {
-	#menu ul li.menu-home a {
-		color: #e48204;
+	.nav {
+		position: absolute;
+		top: 30px;
+		left: 0;
+
+		ul {
+			li {
+				a {
+					text-shadow: 1px 1px 1px #000000;
+				}
+			}
+		}
 	}
 }
 
-.page-id-5 {
-	#menu ul li.menu-sobre a {
-		color: #e48204;
+.home {
+	.nav ul li.menu-home {
+		background-color: $azul;
 	}
 }
 
-.page-id-129 {
-	#menu ul li.menu-servicos a {
-		color: #e48204;
+.page-id-77 {
+	.nav ul li.menu-sobre {
+		background-color: $azul;
 	}
 }
 
-.page-id-202 {
-	#menu ul li.menu-atendimento a {
-		color: #e48204;
+.category-dicas-e-curiosidades, .single:not(.modalidades-template-default) {
+	.nav ul li.menu-dicas-e-curiosidades {
+		background-color: $azul;
+	}
+}
+
+.post-type-archive-modalidades, .tax-modalidades_taxonomy, .single-modalidades {
+	.nav ul li.menu-modalidades {
+		background-color: $azul;
+	}
+}
+
+.page-id-135 {
+	.nav ul li.menu-horarios {
+		background-color: $azul;
+	}
+}
+
+.page-id-131 {
+	.nav ul li.menu-contato {
+		background-color: $azul;
 	}
 }

@@ -1,74 +1,35 @@
-	
-<div id="atendimento">
-	<div class="container">
-		<h1><strong>ATENDIMENTO: <i class="fa fa-phone" aria-hidden="true"></i><?php the_field('telefone_1', 'option'); ?><i class="fa fa-whatsapp" aria-hidden="true"></i> <?php the_field('whatsapp', 'option'); ?></strong></h1>
-	</div>
-</div>
 
-<div id="footer">
+<footer class="box-content azul-escuro footer">
 	<div class="container">
 
 		<div class="row">
 
-			<div class="col-3 footer-mapa">
-			  	<h1>MAPA DO SITE</h1>
-				<ul>
-					<li class="menu-home">
-						<a href="<?php echo get_home_url(); ?>" title="Home">- Home</a>
-					</li>
-
-					<li class="menu-sobre">
-						<a href="<?php echo get_permalink(get_page_by_path('sobre-nos')); ?>" title="Sobre">- Sobre nós</a>
-					</li>
-
-					<li class="menu-servicos">
-						<a href="<?php echo get_permalink(get_page_by_path('servicos')); ?>" title="Serviços">- Serviços</a>
-					</li>
-
-					<li class="menu-atendimento">
-						<a href="<?php echo get_permalink(get_page_by_path('atendimento')); ?>" title="Atendimento">- Atendimento</a>
-					</li>
-				</ul>
+			<div class="col-4 col-footer">
+				<div class="logo">
+					<h1>
+						<a href="<?php echo get_home_url(); ?>" title="<?php the_field('titulo', 'option'); ?>">
+							<img src="<?php the_field('logo_header', 'option'); ?>" alt="<?php the_field('titulo', 'option'); ?>">
+						</a>
+					</h1>
+				
+					<p><?php the_field('descricao','option'); ?></p>
+				</div>
 			</div>
 
-			<div class="col-3 footer-servicos">
-				<h1>SERVIÇOS</h1>
+			<div class="col-1 col-footer"></div>
 
-				<ul>
+			<div class="col-4 col-footer footer-contato">
 
-					<li><a href="javascript:" title="Comercial">- Comercial</a></li>
-					<li><a href="javascript:" title="Decorativo">- Decorativo</a></li>
-					<li><a href="javascript:" title="Insdustrial">- Insdustrial</a></li>
-					<li><a href="javascript:" title="Predial">- Predial</a></li>
-					<li><a href="javascript:" title="Residencial">- Residencial</a></li>
+				<span class="fone-footer">
+					<strong><?php the_field('telefone_1', 'option'); ?><br></strong>
+					<?php the_field('email', 'option'); ?>
 
-
-				<?php /*
-					<?php if( have_rows('servicos',129) ):
-						while ( have_rows('servicos',129) ) : the_row(); ?>
-
-							<li>
-								<a href="<?php echo get_permalink(get_page_by_path('servicos')); ?>" title="<?php the_sub_field('titulo'); ?>">
-									- <?php the_sub_field('titulo'); ?>
-								</a>
-							</li>
-
-						<?php endwhile;
-					endif; ?>
-
-			      */ ?>
-			      	
-			    </ul>
+					<p><?php the_field('endereco', 'option'); ?></p>
+				</span>			  			    
+			    
 			</div>
 
-			<div class="col-4 footer-contato">
-			  <h1>ONDE ESTAMOS</h1>
-			    <p><?php the_field('endereco', 'option'); ?></p>
-			    <a href="mailto:<?php the_field('email', 'option'); ?>" title="<?php the_field('email', 'option'); ?>"><?php the_field('email', 'option'); ?></a>
-			</div>
-
-			<div class="col-2 footer-contato">
-				<h1>SIGA-NOS</h1>
+			<div class="col-3 col-footer footer-contato">
 				<?php if( have_rows('redes_sociais','option') ): ?>
 					<div class="redes">						
 						<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
@@ -83,21 +44,21 @@
 
 		</div>
 	</div>
-</div>
 
-<div class="copy">
-	<div class="container">
-		<div class="row">
+	<div class="copy">
+		<div class="container">
+			<div class="row">
 
-			<div class="col-12 ultimate">
-				<h5>©Copyright <?php echo date('Y'); ?> - <?php the_field('titulo', 'option'); ?>. Todos os direitos reservados.</h5>
+				<div class="col-12 ultimate">
+					<h5>©Copyright <?php echo date('Y'); ?> - <?php the_field('titulo', 'option'); ?>. Todos os direitos reservados.</h5>
 
-				<a href="http://www.ultimate.com.br" target="_blank" title="ULTIMATE">ULTIMATE! tecnologia e design</a>
+					<a href="http://www.ultimate.com.br" target="_blank" title="ULTIMATE">ULTIMATE! tecnologia e design</a>
+				</div>
+
 			</div>
-
 		</div>
 	</div>
-</div>
+</footer>
 
 
 

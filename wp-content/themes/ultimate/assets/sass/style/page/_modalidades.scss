@@ -1,0 +1,93 @@
+.list-cat-modalidades {
+	margin-top: 50px;
+
+	.item {
+		background-position: center;
+		background-size: cover;
+		background-repeat: no-repeat;
+		display: block;
+		height: 20vh;
+		width: 100%;
+		display: table;
+		position: relative;
+		overflow: hidden;
+		@include animacao;
+
+		.box {
+			display: table-cell;
+			vertical-align: middle;
+			width: 100%;
+			text-align: center;
+			position: relative;
+			@include animacao;
+
+			&::after {
+				content: '';
+				background-color: rgba(#000000,0.4);
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 85vh;
+				width: 100%;
+				z-index: 999;
+				@include animacao;
+			}
+		}
+
+		h3, span, span i {
+			color: #ffffff;
+			text-shadow: 1px 1px 1px #000000;
+			position: relative;
+			z-index: 9999;
+		}
+
+		h3 {
+			font-weight: $bold;
+		}
+
+		p {
+
+		}
+
+		span {
+			display: block;
+			font-size: .75rem;
+			line-height: 20px;
+			font-weight: $regular;
+			letter-spacing: 1px;
+			font-family: $lato;
+
+			i {
+				margin-left: 7px;
+				top: 1px;
+			}
+		}
+
+		&:hover {
+			text-decoration: none;
+
+			.box {
+				&::after {
+					background-color: rgba($azul,0.6);
+				}
+			}
+		}
+
+		&.list-parceiros {
+			background-size: auto 90%;
+			background-color: #ffffff;
+		}
+	}
+
+	&.page-modalidades {
+		margin-top: 100px;
+
+		.col-modalidades {
+			margin-bottom: 20px;
+			width: 25%;
+			float: left;
+			padding: 0 10px;
+			@include box-sizing;
+		}
+	}
+}

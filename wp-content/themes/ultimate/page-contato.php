@@ -4,7 +4,7 @@
 		<div class="container">
 			
 			<h2>
-				<?php the_title(); ?>
+				Contato
 				<ul class="breadcrumb"><li><a href="<?php echo get_home_url(); ?>" title="Home">Home</a></li><li><span><?php the_title(); ?></span></li></ul>
 			</h2>
 
@@ -16,7 +16,7 @@
 	while ( have_posts() ) : the_post();
 
 		// Include the page content template.
-		get_template_part( 'content', 'page' );
+		get_template_part( 'content-contato', 'page' );
 
 	// End the loop.
 	endwhile;

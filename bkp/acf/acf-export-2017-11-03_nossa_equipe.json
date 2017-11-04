@@ -1,0 +1,172 @@
+[
+    {
+        "key": "group_598553d31fdb9",
+        "title": "Nossa Equipe",
+        "fields": [
+            {
+                "key": "field_59e7d4cb44028",
+                "label": "Título",
+                "name": "titulo_parceiros",
+                "type": "text",
+                "value": null,
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "prepend": "",
+                "append": "",
+                "maxlength": ""
+            },
+            {
+                "key": "field_59e7d49b44027",
+                "label": "Sub Título",
+                "name": "sub_titulo_equipe",
+                "type": "textarea",
+                "value": null,
+                "instructions": "",
+                "required": 1,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "50",
+                    "class": "",
+                    "id": ""
+                },
+                "default_value": "",
+                "placeholder": "",
+                "maxlength": "",
+                "rows": 2,
+                "new_lines": ""
+            },
+            {
+                "key": "field_5985544177f13",
+                "label": "Pessoas",
+                "name": "equipe",
+                "type": "repeater",
+                "value": null,
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "collapsed": "",
+                "min": 0,
+                "max": 0,
+                "layout": "table",
+                "button_label": "",
+                "sub_fields": [
+                    {
+                        "key": "field_5985546477f14",
+                        "label": "Imagem",
+                        "name": "imagem",
+                        "type": "image",
+                        "value": null,
+                        "instructions": "Tamanho da imagem:\r\n1000px x 400px",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "return_format": "url",
+                        "preview_size": "thumbnail",
+                        "library": "uploadedTo",
+                        "min_width": 1000,
+                        "min_height": 400,
+                        "min_size": "",
+                        "max_width": 1000,
+                        "max_height": 400,
+                        "max_size": "",
+                        "mime_types": ""
+                    },
+                    {
+                        "key": "field_5985548f77f15",
+                        "label": "Título",
+                        "name": "titulo",
+                        "type": "text",
+                        "value": null,
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_598554b977f16",
+                        "label": "Função",
+                        "name": "funcao",
+                        "type": "text",
+                        "value": null,
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "prepend": "",
+                        "append": "",
+                        "maxlength": ""
+                    },
+                    {
+                        "key": "field_598554c477f17",
+                        "label": "Texto",
+                        "name": "texto",
+                        "type": "textarea",
+                        "value": null,
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "25",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "placeholder": "",
+                        "maxlength": "",
+                        "rows": 3,
+                        "new_lines": "br"
+                    }
+                ]
+            }
+        ],
+        "location": [
+            [
+                {
+                    "param": "page",
+                    "operator": "==",
+                    "value": "126"
+                }
+            ]
+        ],
+        "menu_order": 0,
+        "position": "normal",
+        "style": "default",
+        "label_placement": "top",
+        "instruction_placement": "label",
+        "hide_on_screen": "",
+        "active": 1,
+        "description": ""
+    }
+]

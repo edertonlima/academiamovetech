@@ -15,31 +15,34 @@ input:not([type='submit']), textarea {
 
 button, input[type='submit'], .button {
 	width: auto;
-	height: 30px;
-	line-height: 26px;
-	padding: 0 35px;
-	color: #ffffff;
-	font-weight: $regular;
-	font-size: 1rem;
-	text-align: center;
-	display: inline-block;
-	margin: 0 auto;
-	background-color: #e48204;
 	cursor: pointer;
-	@include animacao;
-
-	span {
-		display: block;
-		color: #ffffff;
-		font-style: italic;
-	}
-
-	.fa {
-		font-size: 1.187rem;
-	}	
+	height: 45px;
+	font-family: $lato;
+	border-radius: 30px;
+	margin-top: 30px;
+	outline: 0;
+	font-weight: $bold;
+	padding: 15px 28px;
+	color: #ffffff;
+	text-transform: uppercase;
+	background-color: $azul;
+	line-height: 15px;
+	text-decoration: none;
+	@include animacao;	
 
 	&:hover {
-		background-color: darken(#e48204, 10%);
+		text-decoration: none;
+		background-color: $azul-escuro;
+		color: #ffffff;
+	}
+
+	&.enviar {
+		margin-top: 0;
+
+		i {
+			color: #ffffff;
+			margin-left: 5px;
+		}
 	}
 }
 

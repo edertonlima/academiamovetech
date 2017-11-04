@@ -2,42 +2,117 @@ strong, b {
 	font-weight: $bold;
 }
 
-.col-text {
-	margin-bottom: 50px;
-
-	.ico {
-		margin: 0 auto;
-		display: block;
-		width: 80px;
-	}
-
-	h4 {
-		font-size: 30px;
-		text-align: center;
-		color: #000000;
-		margin-bottom: 20px;
-	}
+p, .p {
+	font-size: 15px;
+	line-height: 150%;
+	text-align: justify;
+	margin-bottom: 16px;
+	font-weight: $regular;
 
 	p {
-		font-size: 16px;
-		line-height: 25px;
+		font-size: 15px;
+		line-height: 150%;
 		text-align: justify;
 		margin-bottom: 16px;
-
-		&:last-child {
-			margin-bottom: 0px;
-		}
+		font-weight: $regular;
 	}
 
 	&:last-child {
 		margin-bottom: 0px;
+
+		p {
+			margin-bottom: 0px;
+		}
+	}
+
+	&.sub-texto {
+		margin-top: -10px;	
+
+		p {
+			margin-top: -10px;	
+		}
+	}
+
+	&.center {
+		text-align: center;
+		max-width: 70%;
+		margin-left: auto;
+		margin-right: auto;
+
+		p {
+			text-align: center;
+			width: 100%;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+}
+
+blockquote {
+	padding: 25px;
+	margin: 30px;
+	background-color: $azul;
+
+	p {
+		color: #fff;
 	}
 }
 
 h1 {
-	width: 300px;
+	width: 200px;
+	margin-top: 16px;
 
 	img {
 		width: 100%;
 	}
+}
+
+.home {
+	h1 {
+		width: 250px;
+		margin-top: 0px;
+	}
+}
+
+h2, h3, h4 {
+	font-weight: $bold;
+	color: $azul-escuro;
+}
+
+h2 {
+	font-size: 40px;
+	line-height: 45px;
+	padding-bottom: 5px;
+	margin-bottom: 40px;
+	position: relative;
+
+	&:after {
+		background: $azul;
+		content: "";
+		display: block;
+		position: absolute;
+		left: 0;
+		bottom: -10px;
+		width: 40px;
+		height: 2px;
+	}
+
+	&.center {
+		text-align: center;
+
+		&:after {
+			margin-left: -20px;
+			left: 50%;
+		}
+	}
+}
+
+h3 {
+	font-size: 35px;
+	line-height: 35px;
+}
+
+h4 {
+	font-size: 23px;
+	line-height: 24px;
 }

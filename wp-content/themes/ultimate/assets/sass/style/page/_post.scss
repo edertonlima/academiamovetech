@@ -1,0 +1,161 @@
+.post {
+	.list-post {
+		margin-top: 70px;
+		float: left;
+		width: 100%;
+		@include clear;
+
+		.text_content {
+			background-color: $azul;
+			padding: 30px 30px 40px;
+
+			h4, p, .button {
+				color: #ffffff;
+			}
+
+			.funcao {
+				margin-top: 20px;
+				font-size: 13px;
+				display: block;
+			}
+
+			p {
+				margin-bottom: 35px;
+				margin-top: 20px;
+				font-size: 13px;
+				opacity: .8;
+				height: 63px;
+				overflow: hidden;
+			}
+
+			.button {
+				background-color: transparent;
+				padding: 10px 30px;
+				border: 1px solid #ffffff;
+				margin: 0;
+				font-size: 12px;
+
+				i {
+					color: #ffffff;
+					font-size: 12px;
+					position: relative;
+					top: -1px;
+					margin-right: 5px;
+					@include animacao;
+				}
+			}
+		}
+
+		.item-post-list {
+			.img-post {
+				height: 30vh;
+				width: 100%;
+				background-position: center;
+				background-size: cover;
+				background-repeat: no-repeat;
+				position: relative;
+				display: table;
+				text-align: center;
+
+				&::after {
+					content: '';
+					position: absolute;
+					top: 0;
+					left: 0;
+					height: 30vh;
+					width: 100%;
+					z-index: 999;
+					@include animacao;
+				}
+			}
+
+			&:hover {
+				.img-post {
+					&::after {
+						background-color: rgba(#fff,0.3);
+					}
+				}
+
+				.button {
+					background-color: #ffffff;
+					color: $azul;
+
+					i {
+						color: $azul;
+					}
+
+					&:hover {
+						color: $azul-escuro;
+
+						i {
+							color: $azul-escuro;
+						}
+					}
+				}
+			}
+
+			&.list-equipe {
+				.img-post {
+					height: 40vh;
+
+					&::after {
+						height: 40vh;
+					}
+				}
+
+				.text_content {
+					background-color: #ffffff;
+
+					h4 {
+						color: $azul-escuro;
+					}
+
+					span, p {
+						color: $cor-txt;
+					}
+
+					p {
+						margin-bottom: 0;
+					}
+				}
+			}
+		}
+	}
+
+	&.list-categoria {
+		.list-post {
+			margin-top: 0;
+		
+			.item-post-list {
+				margin-top: 70px;
+			}
+		}
+	}
+}
+
+.det-post {
+	h2, .sub-texto {
+		width: 100%;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	h2 {
+		max-width: 600px;
+	}
+
+	.sub-texto {
+		max-width: 800px;
+	}
+
+	.sub-texto {
+		margin-bottom: 70px;
+	}
+
+	.img-det-post {
+		width: 40%;
+		float: left;
+		margin: 0 30px 25px 0;
+	}
+}

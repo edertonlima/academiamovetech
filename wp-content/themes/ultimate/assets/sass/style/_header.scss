@@ -1,13 +1,14 @@
 .header {
-	position: absolute;
-	top: 0;
-	z-index: 999;
 	width: 100%;
-	height: $hSlide;
+	@include box-sizing;
+
+	.container {
+		position: relative;
+	}
 
 	.top-header {
 		position: absolute;
-		bottom: -22px;
+		bottom: -29px;
 		width: 100%;
 
 		.container {
@@ -15,7 +16,6 @@
 			padding-top: 10px;
 			padding-bottom: 8px;
 			text-align: center;
-			border-radius: 3px;
 		}
 
 		.fone-topo {
@@ -34,14 +34,14 @@
 			}
 		}
 
-		h2 {
+		.item-horario {
 			color: #ffffff;
 			font-size: 1rem;
 			display: inline-block;
 			position: relative;
 			top: 1px;
 			margin-right: 20px;
-			font-weight: $bold;
+			font-weight: $regular;
 		}
 
 		i {
@@ -85,6 +85,89 @@
 					font-size: 1.5rem;
 					font-weight: $bold;
 				}
+			}
+		}
+	}
+}
+
+body:not(.home){
+	.header {
+		position: relative;
+		background-color: $azul-escuro;
+		height: 100px;
+		margin-top: 30px;
+
+		.top-header {
+			top: -30px;
+
+			.container {
+				max-width: 100%;
+				width: 100%;
+				padding: 2px 0;
+			}
+
+			.fone-topo {
+				display: none;
+			}
+		}
+	}
+}
+
+body.home {
+	.header {
+		position: absolute;
+		top: 0;
+		z-index: 999;
+		height: $hSlide;
+	}
+}
+
+.header-title {
+	background: rgb(244, 244, 244) none repeat scroll 0 0;
+	border-bottom: 1px solid rgba(205, 209, 212, 0.4);
+	padding: 20px 0;
+
+	h2 {
+		padding: 0 0 0 50px;
+		margin: 0;
+		font-weight: $light;
+		font-size: 30px;
+
+		&:after {
+			display: none;
+		}
+	}
+
+	.breadcrumb {
+		padding: 0;
+		float: right;
+		background: transparent;
+		border-radius: 0;
+		margin: 0 50px 0 0;
+
+		li {
+
+			a, span {
+				color: $azul-escuro;
+				font-size: 13px;
+			}
+
+			a {
+				font-weight: $light;
+				@include animacao;
+
+				&:hover {
+					text-decoration: none;
+					color: $azul;
+				}
+			}
+
+			span {
+				
+			}
+
+			&:before {
+				font-size: 10px;
 			}
 		}
 	}
