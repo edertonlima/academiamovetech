@@ -9,6 +9,35 @@
 			display: table-cell;
 			float: none;
 			vertical-align: middle;
+
+			&.footer-endereco {
+				.redes {
+					display: none;
+				}
+			}
+
+			@media all and (max-width: 1200px) {
+				width: 50%;
+
+				&.col-1, &.footer-redes {
+					display: none;
+				}
+
+				&.footer-endereco {
+					.redes {
+						display: inline-block;
+					}
+				}
+			}
+
+			@media all and (max-width: 750px){
+				width: 100%;
+				display: block;
+
+				&.footer-endereco {
+					margin-top: 30px;
+				}
+			}
 		}
 	}
 
@@ -40,10 +69,12 @@
 			font-size: 1.2rem;
 			color: #ffffff;
 			text-decoration: none;
+			font-family: $lato;
 
 			strong {
 				font-size: 2rem;
 				color: #ffffff;
+				font-family: $lato;
 			}
 
 			p {

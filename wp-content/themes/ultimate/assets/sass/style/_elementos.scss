@@ -116,3 +116,53 @@ h4 {
 	font-size: 23px;
 	line-height: 24px;
 }
+
+.table {
+	min-width: 1000px;
+
+	tr {
+		th {
+			font-weight: $bold;
+			color: $azul;
+		}
+
+		td {
+			&.horario {				
+				strong {
+					color: $azul-escuro;
+					font-family: $lato;
+				}
+			}
+
+			a {
+				text-decoration: none;
+				@include animacao;
+
+				&:before {
+					content: '/';
+					display: inline-block;
+					padding: 0 5px 0 3px;
+					color: $cor-txt;
+				}
+
+				&:first-child {
+					&:before {
+						display: none;
+					}
+				}
+
+				&:hover {
+					color: $azul-escuro;
+
+					&:before {
+						color: $cor-txt;
+					}
+				}
+			}
+		}
+	}
+}
+
+.table-responsive {
+	margin-top: 70px;
+}

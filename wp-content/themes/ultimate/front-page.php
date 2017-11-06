@@ -130,6 +130,26 @@
 	</section>
 
 
+	<section class="box-content no-padding">
+		<div class="row">
+
+			<?php $imagem = wp_get_attachment_image_src( get_post_thumbnail_id(187), '' ); ?>
+			<a href="<?php the_permalink(187); ?>" title="<?php echo get_the_title(187); ?>" class="box-page-destaque">
+				<div class="col-6 page-destaque convenios" style="background-image: url('<?php echo $imagem[0]; ?>');">
+					<span><strong><?php echo get_the_title(187); ?></strong></span>
+				</div>
+			</a>
+
+			<?php $imagem = wp_get_attachment_image_src( get_post_thumbnail_id(189), '' ); ?>
+			<a href="<?php the_permalink(189); ?>" title="<?php echo get_the_title(189); ?>"  class="box-page-destaque">
+				<div class="col-6 page-destaque clube-de-vantagens" style="background-image: url('<?php echo $imagem[0]; ?>');">
+					<span><strong><?php echo get_the_title(189); ?></strong></span>
+				</div>
+			</a>
+
+		</div>
+	</section>
+
 	<section class="box-content post">
 		<div class="container">
 			<div class="row">
@@ -165,16 +185,6 @@
 	<?php get_footer(); ?>
 
 </div>
-
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-
-	});
-
-	jQuery(window).resize(function(){
-
-	});
-</script>
 
 <script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/js/fancybox/fancybox.js"></script>
 <script type="text/javascript">

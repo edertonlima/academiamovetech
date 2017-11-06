@@ -102,17 +102,17 @@
 
 	jQuery(document).ready(function(){
 
-		/*jQuery('.menu-mobile').click(function(){
+		jQuery('.menu-mobile').click(function(){
 			if(jQuery(this).hasClass('active')){
-				jQuery('.nav').css('top','-110vh');
+				jQuery('.nav .menu').css('top','-130vh');
 				jQuery(this).removeClass('active');
 				jQuery('.header').removeClass('active');
 			}else{
-				jQuery('.nav').css('top','0px');
+				jQuery('.nav .menu').css('top','-30px');
 				jQuery(this).addClass('active');
 				jQuery('.header').addClass('active');
 			}
-		});*/
+		});
 
 		if(jQuery('body').height() <= jQuery(window).height()){
 			jQuery('.footer').css({position: 'absolute', bottom: '0px'});
@@ -127,23 +127,23 @@
 	});	
 
 	jQuery(window).resize(function(){
-		/*jQuery('.menu-mobile').removeClass('active');
+		jQuery('.menu-mobile').removeClass('active');
 		jQuery('.header').removeClass('active');
-		jQuery('.nav').css('top','-110vh');
+		jQuery('.nav .menu').css('top','-130vh');
 		if(jQuery('body').height() <= jQuery(window).height()){
 			jQuery('.footer').css({position: 'absolute', bottom: '0px'});
 		}else{
 			jQuery('.footer').css({position: 'relative'});
-		}*/
+		}
 	});
 
 	jQuery(window).scroll(function(){
-		/*scroll_body = jQuery(window).scrollTop();
+		scroll_body = jQuery(window).scrollTop();
 		if(scroll_body > 400){
 			jQuery('.header').addClass('scroll_menu');
 		}else{
 			jQuery('.header').removeClass('scroll_menu');
-		}*/
+		}
 	});
 </script>
 
@@ -183,42 +183,47 @@
 						<img src="<?php the_field('logo_header', 'option'); ?>" alt="<?php the_field('titulo', 'option'); ?>">
 					</a>
 				</h1>
-				<ul>
-					<li class="menu-home" style="display: none;">
-						<a href="<?php echo get_home_url(); ?>" title="Home">Home</a>
-					</li>
 
-					<li class="menu-sobre">
-						<a href="<?php echo get_permalink(get_page_by_path('sobre-nos')); ?>" title="Sobre">Sobre nós</a>
-					</li>
+				<div class="menu">
+					<ul>
+						<li class="menu-home" style="display: none;">
+							<a href="<?php echo get_home_url(); ?>" title="Home">Home</a>
+						</li>
 
-					<li class="menu-modalidades">
-						<a href="<?php echo get_home_url(); ?>/modalidades" title="Modalidades">Modalidades</a>
-					</li>
+						<li class="menu-sobre">
+							<a href="<?php echo get_permalink(get_page_by_path('sobre-nos')); ?>" title="Sobre">Sobre nós</a>
+						</li>
 
-					<li class="menu-horarios">
-						<a href="<?php echo get_permalink(get_page_by_path('horarios')); ?>" title="Horários">Horários</a>
-					</li>
+						<li class="menu-modalidades">
+							<a href="<?php echo get_home_url(); ?>/modalidades" title="Modalidades">Modalidades</a>
+						</li>
 
-					<li class="menu-dicas-e-curiosidades">
-						<a href="<?php echo get_home_url(); ?>/dicas-e-curiosidades" title="Dicas e Curiosidades">Dicas e Curiosidades</a>
-					</li>
+						<li class="menu-horarios">
+							<a href="<?php echo get_permalink(get_page_by_path('horarios')); ?>" title="Horários">Horários</a>
+						</li>
 
-					<li class="menu-contato">
-						<a href="<?php echo get_permalink(get_page_by_path('contato')); ?>" title="Contato">Contato</a>
-					</li>
+						<li class="menu-dicas-e-curiosidades">
+							<a href="<?php echo get_home_url(); ?>/dicas-e-curiosidades" title="Dicas e Curiosidades">Dicas e Curiosidades</a>
+						</li>
 
-					<?php if( have_rows('redes_sociais','option') ): ?>
-										
-							<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
+						<li class="menu-contato">
+							<a href="<?php echo get_permalink(get_page_by_path('contato')); ?>" title="Contato">Contato</a>
+						</li>
 
-								<li class="redes"><a href="<?php the_sub_field('url','option'); ?>" title="<?php the_sub_field('nome','option'); ?>" target="_blank">
-									<?php the_sub_field('icone','option'); ?>
-								</a></li>
-							<?php endwhile; ?>						
-						
-					<?php endif; ?>
-				</ul>
+						<?php if( have_rows('redes_sociais','option') ): ?>
+											
+								<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
+
+									<li class="redes"><a href="<?php the_sub_field('url','option'); ?>" title="<?php the_sub_field('nome','option'); ?>" target="_blank">
+										<?php the_sub_field('icone','option'); ?>
+									</a></li>
+								<?php endwhile; ?>						
+							
+						<?php endif; ?>
+					</ul>
+				</div>
+
+				<a href="javascript:" class="menu-mobile"><span><em>X</em></span></a>
 			</nav>
 		</div>
 	</header>

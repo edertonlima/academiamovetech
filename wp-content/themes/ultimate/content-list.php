@@ -10,14 +10,3 @@
 		<a href="<?php the_permalink(); ?>" class="button leia-mais" title="Leia Mais"><i class="fa fa-file-text-o"></i> Leia Mais</a>
 	</div>
 </div>
-
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-
-
-	});
-
-	jQuery(window).resize(function(){
-
-	});
-</script>

@@ -35,6 +35,26 @@
 	</div>
 </section>
 
+<section class="box-content no-padding">
+	<div class="row">
+
+		<?php $imagem = wp_get_attachment_image_src( get_post_thumbnail_id(187), '' ); ?>
+		<a href="<?php the_permalink(187); ?>" title="<?php echo get_the_title(187); ?>" class="box-page-destaque">
+			<div class="col-6 page-destaque convenios" style="background-image: url('<?php echo $imagem[0]; ?>');">
+				<span><strong><?php echo get_the_title(187); ?></strong></span>
+			</div>
+		</a>
+
+		<?php $imagem = wp_get_attachment_image_src( get_post_thumbnail_id(189), '' ); ?>
+		<a href="<?php the_permalink(189); ?>" title="<?php echo get_the_title(189); ?>"  class="box-page-destaque">
+			<div class="col-6 page-destaque clube-de-vantagens" style="background-image: url('<?php echo $imagem[0]; ?>');">
+				<span><strong><?php echo get_the_title(189); ?></strong></span>
+			</div>
+		</a>
+
+	</div>
+</section>
+
 
 <?php if( have_rows('equipe') ): ?>
 	<section class="box-content azul post">
@@ -108,6 +128,9 @@
 				items: 1
 			},
 			768: {
+				items: 2
+			},
+			2000: {
 				items: 3
 			}
 		}
@@ -123,7 +146,7 @@
 			0: {
 				items: 1
 			},
-			600: {
+			400: {
 				items: 2
 			},
 			768: {

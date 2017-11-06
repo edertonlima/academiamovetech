@@ -13,7 +13,9 @@
 			</div>
 
 			<div class="col-12">
-				<img src="<?php echo $imagem[0]; ?>" alt="" class="img-det-post">
+				<?php if($imagem[0]){ ?>
+					<img src="<?php echo $imagem[0]; ?>" alt="" class="img-det-post">
+				<?php } ?>
 				<?php the_content(); ?>
 			</div>
 
@@ -21,14 +23,3 @@
 
 	</div>
 </section>
-
-<script type="text/javascript">
-	jQuery(document).ready(function(){
-
-
-	});
-
-	jQuery(window).resize(function(){
-
-	});
-</script>

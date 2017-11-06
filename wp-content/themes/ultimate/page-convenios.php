@@ -4,8 +4,8 @@
 		<div class="container">
 			
 			<h2>
-				<?php the_title(); ?>
-				<ul class="breadcrumb"><li><a href="<?php echo get_home_url(); ?>" title="Home">Home</a></li><li><span><?php the_title(); ?></span></li></ul>
+				Convênios
+				<ul class="breadcrumb"><li><a href="<?php echo get_home_url(); ?>" title="Home">Home</a></li><li><span>Convênios</span></li></ul>
 			</h2>
 
 		</div>

@@ -18,18 +18,29 @@
 
 			<div class="col-1 col-footer"></div>
 
-			<div class="col-4 col-footer footer-contato">
+			<div class="col-4 col-footer footer-contato footer-endereco">
 
 				<span class="fone-footer">
 					<strong><?php the_field('telefone_1', 'option'); ?><br></strong>
 					<?php the_field('email', 'option'); ?>
 
 					<p><?php the_field('endereco', 'option'); ?></p>
+
+					<?php if( have_rows('redes_sociais','option') ): ?>
+						<div class="redes">						
+							<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>
+
+								<a href="<?php the_sub_field('url','option'); ?>" title="<?php the_sub_field('nome','option'); ?>" target="_blank">
+									<?php the_sub_field('icone','option'); ?>
+								</a>
+							<?php endwhile; ?>						
+						</div>
+					<?php endif; ?>
 				</span>			  			    
 			    
 			</div>
 
-			<div class="col-3 col-footer footer-contato">
+			<div class="col-3 col-footer footer-contato footer-redes">
 				<?php if( have_rows('redes_sociais','option') ): ?>
 					<div class="redes">						
 						<?php while ( have_rows('redes_sociais','option') ) : the_row(); ?>

@@ -10,12 +10,17 @@
 		position: absolute;
 		bottom: -29px;
 		width: 100%;
+		font-family: $lato;
 
 		.container {
 			background-color: $azul;
 			padding-top: 10px;
 			padding-bottom: 8px;
 			text-align: center;
+
+			@media all and (max-width: 500px){
+				display: none;
+			}
 		}
 
 		.fone-topo {
@@ -31,6 +36,7 @@
 			strong {
 				font-size: 2rem;
 				color: #ffffff;
+				font-family: $lato;
 			}
 		}
 
@@ -61,6 +67,7 @@
 				line-height: 0;
 				padding: 10px 20px 15px 3px;
 				color: #ffffff;
+				font-family: $lato;
 
 				&:last-child {
 					border-right: 0;
@@ -87,6 +94,12 @@
 				}
 			}
 		}
+
+		@media all and (max-width: 750px){
+			.item-horario {
+				display: none;
+			}
+		}
 	}
 }
 
@@ -109,6 +122,10 @@ body:not(.home){
 			.fone-topo {
 				display: none;
 			}
+		}
+
+		@media all and (max-width: 500px){
+			margin-top: 0px;
 		}
 	}
 }
@@ -135,6 +152,11 @@ body.home {
 
 		&:after {
 			display: none;
+		}
+
+		@media all and (max-width: 750px){
+			padding: 0px 0 0 20px;
+			font-size: 25px;
 		}
 	}
 
@@ -168,6 +190,17 @@ body.home {
 
 			&:before {
 				font-size: 10px;
+			}
+		}
+
+		@media all and (max-width: 750px){
+			display: block;
+			float: none;
+			margin: 0px;
+			line-height: 0;
+
+			li {
+				line-height: 0;
 			}
 		}
 	}
